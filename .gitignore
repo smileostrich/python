@@ -1,2 +1,13 @@
-.venv
-.idea
+.venv/
+.idea/
+
+*.pyc
+__pycache__/
+instance/
+
+# 아직
+.pytest_cache/
+.coverage
+
+dist/
+build/
