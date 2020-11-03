@@ -47,7 +47,32 @@ tmp = squares.items()
 ans = f'4.5 : {tmp}'
 answer_list.append(ans)
 
-#
+# 4.6
+set_cmp = {i for i in range(10) if i % 2 == 1}
+tmp = ' '.join(map(str, set_cmp))
+ans = f'4.6 : {tmp}'
+answer_list.append(ans)
+
+# 4.7
+gen_cmp = (f'Got {i}' for i in range(10))
+tmp = '\n\t  '.join(gen_cmp)
+# for line in gen_cmp:
+ans = f'4.7 : {tmp}'
+answer_list.append(ans)
+
+# 4.8
+def good():
+    list = ['Harry', 'Ron', 'Hermione']
+    return list
+ans = f'4.8 : {good()}'
+answer_list.append(ans)
+
+# 4.9
+def get_odds():
+    for i in range(1, 10, 2):
+        yield i
+print(get_odds())
+
 
 # answer print
 print('\n'.join(answer_list))
