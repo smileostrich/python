@@ -73,6 +73,8 @@ def get_odds():
         yield i
 print(get_odds())
 
+# 4.10
+
 
 # answer print
 print('\n'.join(answer_list))
