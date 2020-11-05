@@ -68,13 +68,16 @@ ans = f'4.8 : {good()}'
 answer_list.append(ans)
 
 # 4.9
+# def get_odds():
+#     for i in range(1, 10, 2):
+#         yield i
+# print(get_odds())
+
+# 4.9
 def get_odds():
-    for i in range(1, 10, 2):
-        yield i
-print(get_odds())
-
-# 4.10
-
+    # for i in range(1, 10, 2):
+    #     yield i
+print(list(get_odds()))
 
 # answer print
 print('\n'.join(answer_list))
