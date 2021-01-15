@@ -1,7 +1,7 @@
 import requests
 import pprint
 
-token = '1476408491:AAF4e5bVg-HRsqr1g67-jvmKzF6OgapHDzM'
+token = 'input your token'
 method = ['/getMe','/sendMessage', '/getUpdates']
 chain = '&'
 uri = 'https://api.telegram.org/bot' 
