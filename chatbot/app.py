@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-token = '1476408491:AAF4e5bVg-HRsqr1g67-jvmKzF6OgapHDzM/'
+token = 'input your token'
 method = ['/getMe','/sendMessage', '/getUpdates']
 chain = '&'
 uri = 'https://api.telegram.org/bot' 
@@ -12,12 +12,7 @@ uri = 'https://api.telegram.org/bot'
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World!'
-
-
-@app.route('/test')
-def link_test():
-    return 'hello test!'
+    return 'Hello! this is main'
 
 
 @app.route('/telegram', methods=['POST'])
@@ -26,10 +21,10 @@ def telegram():
     response = request.get_json()
     chat_id = response['message']['from']['id']
     text = response['message']['text']
-    if text == '안녕':
-        answer = '안녕하세요!'
+    if text == 'hi':
+        answer = 'hi!'
     else:
-        answer = '무슨 말씀이신지...'
+        answer = 'idk what you say...'
     # print(chat_id, text)
     requests.get(uri + token + f'sendMessage?chat_id={chat_id}&text={answer}')
     
